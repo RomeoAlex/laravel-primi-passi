@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <h1>{{ $message }}</h1>
         <ul>
             @foreach($menus as $key =>$menu )
             <li>

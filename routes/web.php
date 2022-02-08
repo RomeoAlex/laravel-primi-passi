@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $datalink = [
+        'message' => 'WELCOME LARAVEL!!',
+
         'menus' =>[
          'HOME' => '/', 
          'ABOUT'=> '/chi-siamo',
