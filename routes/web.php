@@ -67,7 +67,16 @@ Route::get('/use-blade', function () {
     return view('welcome', $datalink);
 });
 Route::get('/dove', function () {
-    return view('where' );
+    $datalink = [
+        'menus' =>[
+         'HOME' => '/', 
+         'ABOUT'=> '/chi-siamo',
+         'WHERE'=> '/dove',
+         'CONTACTS'=> 'contattaci',
+         'WELCOME BLADE' => 'use-blade',
+        ],
+    ];
+    return view('where',$datalink );
 });
 
 ?>
