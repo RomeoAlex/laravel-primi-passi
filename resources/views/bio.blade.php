@@ -9,10 +9,10 @@
 <body>
     <header>
         <ul>
-            @foreach($menus as $menu)
+            @foreach($menus as $key =>$menu )
             <li>
-                <a href="">
-                    {{ $menu }},
+                <a href="{{ $menu }}">
+                    {{ $key }},
                 </a>
             </li>
             @endforeach

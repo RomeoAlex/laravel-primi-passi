@@ -14,13 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     $datalink = [
         'menus' =>[
-         'HOME',  
-         'ABOUT',
-         'WHERE',
-         'CONTACTS',
-         'WELCOME BLADE',
+         'HOME' => '/', 
+         'ABOUT'=> '/chi-siamo',
+         'WHERE'=> '/dove',
+         'CONTACTS'=> 'contattaci',
+         'WELCOME BLADE' => 'use-blade',
         ],
     ];
 
@@ -28,14 +29,43 @@ Route::get('/', function () {
 });
 
 Route::get('/contattaci', function () {
-    return view('contacts');
+    $datalink = [
+        'menus' =>[
+         'HOME' => '/', 
+         'ABOUT'=> '/chi-siamo',
+         'WHERE'=> '/dove',
+         'CONTACTS'=> 'contattaci',
+         'WELCOME BLADE' => 'use-blade',
+        ],
+    ];
+    return view('contacts', $datalink );
 });
 Route::get('/chi-siamo', function () {
-    return view('bio');
+    $datalink = [
+        'menus' =>[
+         'HOME' => '/', 
+         'ABOUT'=> '/chi-siamo',
+         'WHERE'=> '/dove',
+         'CONTACTS'=> 'contattaci',
+         'WELCOME BLADE' => 'use-blade',
+        ],
+    ];
+    return view('bio', $datalink);
 });
 Route::get('/use-blade', function () {
-    return view('welcome');
+    $datalink = [
+        'menus' =>[
+         'HOME' => '/', 
+         'ABOUT'=> '/chi-siamo',
+         'WHERE'=> '/dove',
+         'CONTACTS'=> 'contattaci',
+         'WELCOME BLADE' => 'use-blade',
+        ],
+    ];
+    return view('welcome', $datalink);
 });
 Route::get('/dove', function () {
     return view('where' );
 });
+
+?>
